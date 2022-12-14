@@ -2,6 +2,7 @@ require ('dotenv').config();
 const express = require ('express');
 const db = require('./db/connect');
 const employeeRoutes = require('./routes/employees.routes')
+const cors = require('cors')
 
 const app = express();
 //connecting db
@@ -13,6 +14,7 @@ app.get('/',(req,res)=>{
 
 //middleware
 app.use(express.json());
+app.use(cors());
 
 app.use('/api',employeeRoutes)
 
