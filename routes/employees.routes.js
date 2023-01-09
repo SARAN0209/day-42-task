@@ -1,5 +1,5 @@
 const express = require ('express');
-const Employees = require ('../models/employees.model');
+const Employees = require ('../models/employees.model');    
 
 const router = express.Router();
 
