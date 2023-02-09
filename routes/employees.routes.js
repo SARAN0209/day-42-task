@@ -49,7 +49,7 @@ router.post('/employees',(req, res) => {
             const newEmployee = new Employees(payload);
             newEmployee.save((err,data)=>{
                 if(err){
-                    return res.status(400).send({message:'Error while adding new employee. Please check the data '});
+                    return res.status(400).send({message:'This Data is already exist '});
                 }
                 res.status(201).send({Employeeid:data._id,message:'Employees has been add successfully.'})
             })
